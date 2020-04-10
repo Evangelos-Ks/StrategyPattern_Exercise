@@ -8,13 +8,29 @@ namespace StrategyPattern_Exercise
 {
     class SelectPattern
     {
+        public Pattern Pattern { get; set; }
+
         public void Select(Pattern pattern)
         {
-            Console.WriteLine();
-            Console.WriteLine("\t" + pattern.Name);
-            Console.WriteLine();
-            pattern.DisplayPattern();
-            Console.WriteLine();
+            this.Pattern = pattern;
         }
+         
+        public void Display()
+        {
+            if (Pattern != null)
+            {
+                Console.WriteLine();
+                Console.WriteLine("\t" + Pattern.Name);
+                Console.WriteLine();
+                Pattern.DisplayPattern();
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("You didn't choose a pattern");
+            }
+            
+        }
+        
     }
 }

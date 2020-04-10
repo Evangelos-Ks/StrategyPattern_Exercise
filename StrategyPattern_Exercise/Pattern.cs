@@ -82,6 +82,7 @@ namespace StrategyPattern_Exercise
         public override void DisplayPattern()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.WriteLine(" -----------------------------------------");
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 10; j++)
@@ -166,6 +167,8 @@ namespace StrategyPattern_Exercise
         public override void DisplayPattern()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            Console.WriteLine(" -----------------------------------------");
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 10; j++)
