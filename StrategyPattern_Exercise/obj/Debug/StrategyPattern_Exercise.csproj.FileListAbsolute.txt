@@ -1,0 +1,6 @@
+C:\Evangelos\Archive\Education\4. Programming languages\C#\PeopleCert\Advance\Design_Patterns\Exercises\StrategyPattern_Exercise\StrategyPattern_Exercise\bin\Debug\StrategyPattern_Exercise.exe.config
+C:\Evangelos\Archive\Education\4. Programming languages\C#\PeopleCert\Advance\Design_Patterns\Exercises\StrategyPattern_Exercise\StrategyPattern_Exercise\bin\Debug\StrategyPattern_Exercise.exe
+C:\Evangelos\Archive\Education\4. Programming languages\C#\PeopleCert\Advance\Design_Patterns\Exercises\StrategyPattern_Exercise\StrategyPattern_Exercise\bin\Debug\StrategyPattern_Exercise.pdb
+C:\Evangelos\Archive\Education\4. Programming languages\C#\PeopleCert\Advance\Design_Patterns\Exercises\StrategyPattern_Exercise\StrategyPattern_Exercise\obj\Debug\StrategyPattern_Exercise.csprojAssemblyReference.cache
+C:\Evangelos\Archive\Education\4. Programming languages\C#\PeopleCert\Advance\Design_Patterns\Exercises\StrategyPattern_Exercise\StrategyPattern_Exercise\obj\Debug\StrategyPattern_Exercise.exe
+C:\Evangelos\Archive\Education\4. Programming languages\C#\PeopleCert\Advance\Design_Patterns\Exercises\StrategyPattern_Exercise\StrategyPattern_Exercise\obj\Debug\StrategyPattern_Exercise.pdb
