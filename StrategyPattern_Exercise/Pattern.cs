@@ -8,6 +8,7 @@ namespace StrategyPattern_Exercise
 {
     abstract class Pattern
     {
+        protected string[,] field = new string[10, 5];
         abstract public string Name { get; }
         abstract protected string[,] FieldPattern();
         abstract public void DisplayPattern();
@@ -15,8 +16,6 @@ namespace StrategyPattern_Exercise
 
     class HorizontalLines : Pattern
     {
-        private string[,] field = new string[10, 5];
-
         public override string Name => "Horizontal lines";
 
         protected override string[,] FieldPattern()
@@ -81,15 +80,18 @@ namespace StrategyPattern_Exercise
 
         public override void DisplayPattern()
         {
+            int columns = field.GetLength(0);
+            int rows = field.GetLength(1);
+
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine(" -----------------------------------------");
-            for (int i = 0; i < 5; i++)
+            for (int row = 0; row < rows; row++)
             {
-                for (int j = 0; j < 10; j++)
+                for (int column = 0; column < columns; column++)
                 {
                     Console.Write(" | ");
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write(FieldPattern()[j, i]);
+                    Console.Write(FieldPattern()[column, row]);
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 Console.WriteLine(" | ");
@@ -100,8 +102,6 @@ namespace StrategyPattern_Exercise
 
     class VerticallLines : Pattern
     {
-        private string[,] field = new string[10, 5];
-
         public override string Name => "Vertical lines";
 
         protected override string[,] FieldPattern()
@@ -166,16 +166,18 @@ namespace StrategyPattern_Exercise
 
         public override void DisplayPattern()
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            int columns = field.GetLength(0);
+            int rows = field.GetLength(1);
 
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine(" -----------------------------------------");
-            for (int i = 0; i < 5; i++)
+            for (int row = 0; row < rows; row++)
             {
-                for (int j = 0; j < 10; j++)
+                for (int column = 0; column < columns; column++)
                 {
                     Console.Write(" | ");
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write(FieldPattern()[j, i]);
+                    Console.Write(FieldPattern()[column, row]);
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 Console.WriteLine(" | ");
