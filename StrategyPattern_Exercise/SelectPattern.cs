@@ -8,14 +8,14 @@ namespace StrategyPattern_Exercise
 {
     class SelectPattern
     {
-        public Pattern Pattern { get; set; }
+        protected Pattern Pattern { get; set; }
 
-        public void Select(Pattern pattern)
+        protected void Select(Pattern pattern)
         {
             this.Pattern = pattern;
         }
          
-        public void Display()
+        protected void Display()
         {
             if (Pattern != null)
             {
@@ -30,6 +30,33 @@ namespace StrategyPattern_Exercise
                 Console.WriteLine("You didn't choose a pattern");
             }
             
+        }
+
+        public void SelectMenu()
+        {
+            Console.Write("How would you like to cut the field? 1) Horizontal, 2) Vertical : ");
+            string input = Console.ReadLine().Trim();
+            Console.WriteLine();
+
+            switch (input)
+            {
+                case "1":
+                    Select(new HorizontalLines());
+                    Display();
+                    break;
+
+                case "2":
+                    Select(new VerticallLines());
+                    Display();
+                    break;
+
+                default:
+                    Console.WriteLine("Not appropriate selection");
+                    Display();
+                    break;
+            }
+
+            Console.WriteLine();
         }
         
     }
