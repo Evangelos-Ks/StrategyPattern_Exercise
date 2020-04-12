@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StrategyPattern_Exercise
 {
@@ -32,13 +28,9 @@ namespace StrategyPattern_Exercise
             
         }
 
-        public void SelectMenu()
+        protected void ChoosePattern(string selectedPattern)
         {
-            Console.Write("How would you like to cut the field? 1) Horizontal, 2) Vertical : ");
-            string input = Console.ReadLine().Trim();
-            Console.WriteLine();
-
-            switch (input)
+            switch (selectedPattern)
             {
                 case "1":
                     Select(new HorizontalLines());
@@ -55,9 +47,22 @@ namespace StrategyPattern_Exercise
                     Display();
                     break;
             }
+        }
+
+        public void SelectMenu()
+        {
+            Console.WriteLine("\tHow would you like to cut the field?");
+            Console.WriteLine();
+            Console.WriteLine("\t1. Horizontal");
+            Console.WriteLine("\t2. Vertical");
+            Console.WriteLine();
+            Console.Write("\tSelect the appropriate number : ");
+            string selectedPattern = Console.ReadLine().Trim();
+            Console.WriteLine();
+
+            ChoosePattern(selectedPattern);
 
             Console.WriteLine();
         }
-        
     }
 }

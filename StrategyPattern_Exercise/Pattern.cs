@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StrategyPattern_Exercise
 {
@@ -84,9 +80,10 @@ namespace StrategyPattern_Exercise
             int rows = field.GetLength(1);
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.WriteLine(" -----------------------------------------");
+            Console.WriteLine("\t -----------------------------------------");
             for (int row = 0; row < rows; row++)
             {
+                Console.Write("\t");
                 for (int column = 0; column < columns; column++)
                 {
                     Console.Write(" | ");
@@ -95,7 +92,7 @@ namespace StrategyPattern_Exercise
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 Console.WriteLine(" | ");
-                Console.WriteLine(" -----------------------------------------");
+                Console.WriteLine("\t -----------------------------------------");
             }
         }
     }
@@ -170,9 +167,10 @@ namespace StrategyPattern_Exercise
             int rows = field.GetLength(1);
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.WriteLine(" -----------------------------------------");
+            Console.WriteLine("\t -----------------------------------------");
             for (int row = 0; row < rows; row++)
             {
+                Console.Write("\t");
                 for (int column = 0; column < columns; column++)
                 {
                     Console.Write(" | ");
@@ -181,7 +179,7 @@ namespace StrategyPattern_Exercise
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 Console.WriteLine(" | ");
-                Console.WriteLine(" -----------------------------------------");
+                Console.WriteLine("\t -----------------------------------------");
             }
         }
     }
