@@ -12,6 +12,7 @@ namespace StrategyPattern_Exercise
             selectPattern.SelectMenu();
             
             Console.ReadKey();
+
         }
     }
 }
